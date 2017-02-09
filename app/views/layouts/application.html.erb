@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gamestore</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  </head>
+
+  <body>
+    <%= render 'layouts/navigation'%>
+
+    <%= render 'layouts/carousel' if @render_carousel %>
+  
+    <%= render 'layouts/messages'%>
+
+    <header>
+      <div class="container">
+        <div class="col-md-9">
+          <% if params[:controller] == 'games' && params[:action] == 'index' %>
+            <h1>The GameStore </h1>
+          <% end %>
+        </div>
+      </div>
+    </header>
+    <section>
+    <div class="container">
+      <div class="row">
+          <div class="col-md-9">
+
+    <%= yield %>
+          </div>
+          <div class="col-md-3">
+            <%= render 'partials/sidebar' %>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="contanier">
+      <p>Copyright &copy; 2017 - All Rights Reserved</p>
+    </div>
+    </footer
+  </body>
+</html>

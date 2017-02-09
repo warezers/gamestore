@@ -1,0 +1,25 @@
+
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+       <!-- Indicators -->
+       <ol class="carousel-indicators">
+         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+         <li data-target="#myCarousel" data-slide-to="1"></li>
+         <li data-target="#myCarousel" data-slide-to="2"></li>
+       </ol>
+       <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <%= image_tag('cover/res1.jpg',class:'first-responsive')%>
+          </div>
+          <div class="item">
+            <%= image_tag('cover/tek1.jpg',class:'first-responsive')%>
+          </div>
+          <div class="item">
+            <%= image_tag('cover/un1.jpg',class:'first-responsive')%>
+          </div>
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+          </a>
+    </div><!-- /.carousel -->

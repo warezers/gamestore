@@ -1,0 +1,9 @@
+<div id=sidebar>
+  <% if params[:controller] == 'games' && params[:action] == 'index' || params[:action] == 'show' %>
+    <div class="list-group">
+      <% @categories.each do |category| %>
+        <%= link_to category.genre,category_path(category.id),class:'list-group-item' %>
+      <% end %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,16 @@
+<div id="page-index">
+  <% @games.each_slice(4) do |game| %>
+    <div class="row">
+      <% game.each do |game| %>
+       <div class="col-md-3 col-sm-3">
+          <div class="thumbnail">
+            <%= image_tag(game.coverpath)if game.coverpath.presence%>
+              <h4><b><%= game.name%></b></h4>
+              <p><%= game.description%></p>
+              <%= link_to 'Read More', game_path(game), class:'btn btn-primary'%>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

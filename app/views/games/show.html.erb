@@ -1,0 +1,23 @@
+<div id="game-show">
+
+  <div class="game-show-left">
+    <%= image_tag(@game.coverpath)if @game.coverpath.presence%>
+  </div>
+  <div class="game-show-right">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3><%=@game.name%></h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+          <li><strong id= "left">Year : </strong> <br /><%= @game.year%></li>
+          <li><strong id= "left">Description :</strong><br /> <%= @game.description%></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="clearfix">
+
+
+</div>
