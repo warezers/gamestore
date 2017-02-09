@@ -14,13 +14,3 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
-<script type="text/javascript">
-$(document).ready(function () {
-    $('.carousel').carousel({
-        interval: 7000
-    });
-
-    $('.carousel').carousel('cycle');
-});
-</script>
